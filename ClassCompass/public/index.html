@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Compass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Add your custom styles here */
+        #view-schedule {
+            width: 80%; /* Adjust this percentage as needed */
+            max-width: 1200px; /* Prevent the section from becoming too wide */
+            margin: 0 auto; /* Center the section */
+        }
+
+        .schedule-table {
+            width: 100%; /* Make the table take the full width of the container */
+            border-collapse: collapse; /* Make the borders collapse into one */
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 10px; /* Add padding to table cells */
+            border: 1px solid #ddd; /* Add a light border to cells */
+            text-align: left; /* Align text to the left */
+        }
+
+        .schedule-table th {
+            background-color: #f2f2f2; /* Light background for header cells */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="options-tab">
+        <div class="logo">ClassCompass</div>
+        <ul>
+            <li><a href="#" id="nav-home">Home</a></li>
+            <li><a href="#" id="nav-schedule">View Schedule</a></li>
+            <li><a href="#" id="nav-add-class">Add Class</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Screen -->
+    <section id="home" class="screen active">
+        <header>
+            <h1>Welcome to Class Compass</h1>
+            <p>Organize your class schedule easily!</p>
+        </header>
+        <main>
+            <button id="to-schedule" class="rounded-button">View Schedule</button>
+        </main>
+    </section>
+
+    <!-- Schedule Screen -->
+    <section id="view-schedule" class="screen hidden">
+        <header>
+            <h1>Your Schedule</h1>
+        </header>
+        <main>
+            <div class="schedule-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Location</th>
+                            <th>Professor</th>
+                            <th>Mode of Transport</th>
+                            <th>Actions</th> <!-- New column for actions -->
+                        </tr>
+                    </thead>
+                    <tbody id="class-schedule"></tbody>
+                </table>
+                <p id="no-classes-message" class="hidden">You have no classes scheduled.</p>
+            </div>
+            <button id="add-class-nav" class="rounded-button">Add a Class</button>
+        </main>
+    </section>
+
+    <!-- Add Class Screen -->
+    <section id="add-class" class="screen hidden">
+        <header>    
+            <h1>Add Your Class Schedule</h1>
+        </header>
+        <main>
+            <form id="schedule-form">
+                <div>
+                    <label for="class-name">Class Name:</label>
+                    <input type="text" id="class-name" name="class-name" required>
+                </div>
+                <div>
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time" name="start-time" required>
+                </div>
+                <div>
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time" name="end-time" required>
+                </div>
+                <div>
+                    <label for="location">Class Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div>
+                    <label for="professor-name">Professor's Name:</label>
+                    <input type="text" id="professor-name" name="professor-name">
+                </div>
+                <div>
+                    <label for="transport-mode">Mode of Transport:</label>
+                    <select id="transport-mode" name="transport-mode" required>
+                        <option value="" disabled selected>Select Mode</option>
+                        <option value="driving">Driving</option>
+                        <option value="walking">Walking</option>
+                        <option value="bicycling">Bicycling</option>
+                        <option value="transit">Transit</option>
+                    </select>
+                </div>
+                <button type="submit" class="rounded-button">Add Class</button>
+            </form>
+            <p id="form-message" class="hidden"></p>
+        </main>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Class Compass. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

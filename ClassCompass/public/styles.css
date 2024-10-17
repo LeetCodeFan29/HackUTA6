@@ -1,0 +1,164 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to center align content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full height of the viewport */
+}
+
+
+.logo {
+    color: white; /* Logo color */
+    margin-left: 50px;
+    margin-top:5px;
+    font-size: 24px; /* Font size for logo */
+    font-weight: bold; /* Make logo bold */
+    margin-right: auto; /* Push the logo to the left */
+    padding: 10px; /* Add padding for spacing */
+}   
+
+
+nav {
+    position:fixed;
+    top:0;
+    background-color: #0056b3;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    padding-right: 70px;
+    display: flex;
+    align-items:left;
+    justify-content: flex-end;
+    margin-bottom: 20px; /* Add space below the nav */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.delete-button {
+    background-color: #a72828;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #782121;
+    transform: scale(1.05);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    line-height: 1.5; /* Ensure text is vertically centered */
+}
+
+nav a:hover {
+    background-color: #004494;
+    transform: scale(1.05);
+}
+
+.screen {
+    display: none;
+    padding: 20px;
+    width: 90%; /* Make sure it's responsive */
+    max-width: 600px; /* Limit the width for larger screens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+    background-color: white; /* Optional: background color */
+    text-align: center; /* Center text in the screen */
+    border-radius: 10px; /* Rounded corners for the screen */
+}
+
+.screen.active {
+    display: block;
+}
+
+header h1, header p {
+    text-align: center; /* Center align the header text */
+}
+
+main {
+    display: flex; 
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
+    gap: 10px; /* Add space between form elements */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
+    gap: 10px; /* Add space between form elements */
+    width: 100%; /* Make form full width */
+}
+
+form div {
+    width: 100%; /* Make form divs take the full width */
+    max-width: 400px; /* Limit the width for form elements */
+}
+
+label {
+    text-align: left; /* Align labels to the left */
+    display: block; /* Make labels block elements */
+}
+
+input, select, button {
+    width: 100%; /* Make inputs and buttons take full width */
+    padding: 10px; /* Add padding for better touch targets */
+    border: 1px solid #ccc; /* Add border for inputs */
+    border-radius: 20px; /* Rounded corners for inputs */
+}
+
+.rounded-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.rounded-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#no-classes-message {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
